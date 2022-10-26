@@ -1,0 +1,15 @@
+POST https://jcummingsphotographybackend.onrender.com/new
+Content-Type: application/json
+
+{
+    "firstName" : "Sam",
+    "lastName" : "test",
+    "email" : "test", 
+    "phone" : "test" , 
+    "serviceType": "test", 
+    "eventDate" : "test",
+    "dateFlexible": "no"
+}
+
+###
+GET https://jcummingsphotographybackend.onrender.com/inquiries

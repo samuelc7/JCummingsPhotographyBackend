@@ -1,0 +1,34 @@
+{
+  "name": "jcummingsphotographybackend",
+  "version": "1.0.0",
+  "description": "The backend for Janessa Cummings Photography",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuelc7/JCummingsPhotographyBackend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samuelc7/JCummingsPhotographyBackend/issues"
+  },
+  "homepage": "https://github.com/samuelc7/JCummingsPhotographyBackend#readme",
+  "dependencies": {
+    "@google-cloud/local-auth": "^2.1.0",
+    "body-parser": "^1.20.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "googleapis": "^105.0.0",
+    "mongodb": "^4.10.0"
+  },
+  "devDependencies": {
+    "bootstrap": "^5.2.2",
+    "swagger-autogen": "^2.22.0",
+    "swagger-ui-express": "^4.5.0"
+  }
+}

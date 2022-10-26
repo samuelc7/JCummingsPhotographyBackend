@@ -1,0 +1,32 @@
+POST http://localhost:3000/new
+Content-Type: application/json
+
+{
+    "firstName" : "Sam",
+    "lastName" : "new",
+    "email" : "test", 
+    "phone" : "test" , 
+    "serviceType": "test", 
+    "eventDate" : "test",
+    "dateFlexible": "no"
+}
+
+###
+GET http://localhost:3000/inquiries
+
+###
+PUT http://localhost:3000/update
+content-type: application/json
+
+{
+    "id" : "634b5fbbff388af26a472e9d",
+    "email" : "testing123"
+}
+
+###
+DELETE http://localhost:3000/delete
+content-type: application/json
+
+{
+    "id" : "634b5fbbf3f88af26a472e9d"
+}

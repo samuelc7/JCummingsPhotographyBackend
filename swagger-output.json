@@ -1,0 +1,163 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "JCummings Photography API",
+    "description": "API for JCummings Photography",
+    "version": "1.0.0"
+  },
+  "host": "jcummingsphotographybackend.onrender.com",
+  "basePath": "/",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "paths": {
+    "/new": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "in" : "body",
+            "name" : "body",
+            "description" : "All the required fields for the new inquiry.",
+            "schema" : {
+              "type" : "object",
+              "required" : [ "firstName", "lastName", "phone", "serviceType", "email", "eventDate", "dateFlexible" ],
+              "properties" : {
+                "firstName" : {
+                  "type" : "string"
+                },
+                "lastName" : {
+                  "type" : "string"
+                },
+                "phone" : {
+                  "type" : "string"
+                },
+                "serviceType" : {
+                  "type" : "string"
+                },
+                "email" : {
+                  "type" : "string"
+                },
+                "eventDate" : {
+                  "type" : "string"
+                },
+                "dateFlexible" : {
+                  "type" : "string"
+                }
+              }
+            }
+          } 
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/inquiries": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/update": {
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "in" : "body",
+            "name" : "body",
+            "description" : "The id is required in order to update an inquiry. All other fields are optional.",
+            "schema" : {
+              "type" : "object",
+              "required" : [ "id" ],
+              "properties" : {
+                "id" : {
+                  "type" : "string"
+                },
+                "firstName" : {
+                  "type" : "string"
+                },
+                "lastName" : {
+                  "type" : "string"
+                },
+                "phone" : {
+                  "type" : "string"
+                },
+                "serviceType" : {
+                  "type" : "string"
+                },
+                "email" : {
+                  "type" : "string"
+                },
+                "eventDate" : {
+                  "type" : "string"
+                },
+                "dateFlexible" : {
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Updated"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/delete": {
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "in" : "body",
+            "name" : "body",
+            "description" : "The id is required in order to delete an inquiry.",
+            "schema" : {
+              "type" : "object",
+              "required" : [ "id" ],
+              "properties" : {
+                "id" : {
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500" : {
+            "description" : "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    }
+  }
+}
