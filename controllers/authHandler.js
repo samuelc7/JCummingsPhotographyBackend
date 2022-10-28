@@ -13,7 +13,7 @@ const authHandler = async (req, res) => {
     let code = req["query"]["code"];
     let { tokens } = await oauth2Client.getToken(code);
     oauth2Client.setCredentials(tokens);
-    res.writeHead(301, { "Location" : "http://localhost:3000/home"}).end();
+    res.writeHead(301, { "Location" : "https://jcummingsphotographybackend.onrender.com/home"}).end();
 }
 
 module.exports = authHandler
