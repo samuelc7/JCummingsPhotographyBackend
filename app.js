@@ -34,7 +34,7 @@ DB.testConnection();
 // Get the login page
 app.get("/", (req, res) => { res.sendFile(__dirname + "/static/index.html")});
 // Get the home page
-app.get("/home", (req, res) => { res.sendFile(__dirname + "/static/home.html")});
+// app.get("/home", (req, res) => { res.sendFile(__dirname + "/static/home.html")});
 
 app.use("/", require("./routes"));
 app.listen(port, () => {

@@ -28,6 +28,9 @@
   },
   "devDependencies": {
     "bootstrap": "^5.2.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.7.1",
+    "node-fetch": "^2.6.7",
     "swagger-autogen": "^2.22.0",
     "swagger-ui-express": "^4.5.0"
   }

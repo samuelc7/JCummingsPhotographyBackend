@@ -14,7 +14,7 @@ router.delete("/delete", require("../controllers/delete"));
 
 // OAuth routes
 router.get("/glogin", require("../controllers/auth"));
-router.get("/oauth2callback", require("../controllers/authHandler"))
+router.get("/oauth2callback", require("../controllers/authHandler.js"))
 
 // Documentation calls
 router.use('/api-docs', swaggerUi.serve);

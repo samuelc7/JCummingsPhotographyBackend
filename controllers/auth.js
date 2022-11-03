@@ -8,7 +8,7 @@ const oauth2Client = new google.auth.OAuth2(
     process.env.REDIRECT_URL
 );
 
-const scopes = ["https://www.googleapis.com/auth/userinfo.email"]
+const scopes = ["https://www.googleapis.com/auth/userinfo.profile"]
 
 // Generate url that asks permissions
 const authorizationUrl = oauth2Client.generateAuthUrl({

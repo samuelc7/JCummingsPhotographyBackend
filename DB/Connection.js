@@ -1,4 +1,5 @@
 const dotenv = require("dotenv");
+const res = require("express/lib/response");
 dotenv.config();
 
 const mongodb = require("mongodb");
@@ -109,6 +110,44 @@ class DB {
             return result;
         } catch (e) {
             console.error("Could not delete user: " + e);
+            return 500;
+        }
+    }
+
+    /**
+     * This method will find a user if they exist
+     */
+    async findUser(identifier) {
+        this.refresh();
+        try {
+            await this.client.connect();
+            const result = await this.client.db("JanessaCummingsPhotography").collection("Users").findOne({
+                identifier: identifier
+            });
+            this.client.close();
+            return result;
+        } catch (e) {
+            console.error("Could not find User: " + e)
+        }
+    }
+
+    /**
+     * This method will create a new user in the users collection
+     */
+    async createUser(identifier, email, firstName, lastName) {
+        this.refresh();
+        try {
+            await this.client.connect();
+            const result = await this.client.db("JanessaCummingsPhotography").collection("Users").insertOne({
+                identifier: identifier,
+                email: email,
+                firstName: firstName,
+                lastName: lastName
+            });
+            this.client.close();
+            return result;
+        } catch (e) {
+            console.error("Could not create user: " + e);
             return 500;
         }
     }
